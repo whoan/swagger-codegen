@@ -37,6 +37,7 @@ class  Amount
 {
 public:
     Amount();
+    Amount(const web::json::value& json);
     virtual ~Amount();
 
     /////////////////////////////////////////////

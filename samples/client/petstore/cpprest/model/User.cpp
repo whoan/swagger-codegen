@@ -39,6 +39,27 @@ User::User()
     m_UserStatusIsSet = false;
 }
 
+User::User(const web::json::value& json)
+{
+    m_Id = 0L;
+    m_IdIsSet = false;
+    m_Username = utility::conversions::to_string_t("");
+    m_UsernameIsSet = false;
+    m_FirstName = utility::conversions::to_string_t("");
+    m_FirstNameIsSet = false;
+    m_LastName = utility::conversions::to_string_t("");
+    m_LastNameIsSet = false;
+    m_Email = utility::conversions::to_string_t("");
+    m_EmailIsSet = false;
+    m_Password = utility::conversions::to_string_t("");
+    m_PasswordIsSet = false;
+    m_Phone = utility::conversions::to_string_t("");
+    m_PhoneIsSet = false;
+    m_UserStatus = 0;
+    m_UserStatusIsSet = false;
+    fromJson(json);
+}
+
 User::~User()
 {
 }

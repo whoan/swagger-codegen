@@ -37,6 +37,7 @@ class  ApiResponse
 {
 public:
     ApiResponse();
+    ApiResponse(const web::json::value& json);
     virtual ~ApiResponse();
 
     /////////////////////////////////////////////

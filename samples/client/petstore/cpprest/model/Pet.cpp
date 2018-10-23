@@ -30,6 +30,18 @@ Pet::Pet()
     m_StatusIsSet = false;
 }
 
+Pet::Pet(const web::json::value& json)
+{
+    m_Id = 0L;
+    m_IdIsSet = false;
+    m_CategoryIsSet = false;
+    m_Name = utility::conversions::to_string_t("");
+    m_TagsIsSet = false;
+    m_Status = utility::conversions::to_string_t("");
+    m_StatusIsSet = false;
+    fromJson(json);
+}
+
 Pet::~Pet()
 {
 }

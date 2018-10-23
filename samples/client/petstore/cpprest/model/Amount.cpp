@@ -24,6 +24,12 @@ Amount::Amount()
     m_Value = 0.0;
 }
 
+Amount::Amount(const web::json::value& json)
+{
+    m_Value = 0.0;
+    fromJson(json);
+}
+
 Amount::~Amount()
 {
 }

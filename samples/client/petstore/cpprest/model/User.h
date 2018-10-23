@@ -37,6 +37,7 @@ class  User
 {
 public:
     User();
+    User(const web::json::value& json);
     virtual ~User();
 
     /////////////////////////////////////////////

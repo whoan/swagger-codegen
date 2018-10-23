@@ -37,6 +37,7 @@ class  Tag
 {
 public:
     Tag();
+    Tag(const web::json::value& json);
     virtual ~Tag();
 
     /////////////////////////////////////////////

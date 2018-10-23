@@ -40,6 +40,7 @@ class  Pet
 {
 public:
     Pet();
+    Pet(const web::json::value& json);
     virtual ~Pet();
 
     /////////////////////////////////////////////

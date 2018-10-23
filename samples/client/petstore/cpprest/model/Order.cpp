@@ -35,6 +35,23 @@ Order::Order()
     m_CompleteIsSet = false;
 }
 
+Order::Order(const web::json::value& json)
+{
+    m_Id = 0L;
+    m_IdIsSet = false;
+    m_PetId = 0L;
+    m_PetIdIsSet = false;
+    m_Quantity = 0;
+    m_QuantityIsSet = false;
+    m_ShipDate = utility::datetime();
+    m_ShipDateIsSet = false;
+    m_Status = utility::conversions::to_string_t("");
+    m_StatusIsSet = false;
+    m_Complete = false;
+    m_CompleteIsSet = false;
+    fromJson(json);
+}
+
 Order::~Order()
 {
 }

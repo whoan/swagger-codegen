@@ -37,6 +37,7 @@ class  Category
 {
 public:
     Category();
+    Category(const web::json::value& json);
     virtual ~Category();
 
     /////////////////////////////////////////////

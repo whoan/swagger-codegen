@@ -29,6 +29,17 @@ ApiResponse::ApiResponse()
     m_MessageIsSet = false;
 }
 
+ApiResponse::ApiResponse(const web::json::value& json)
+{
+    m_Code = 0;
+    m_CodeIsSet = false;
+    m_Type = utility::conversions::to_string_t("");
+    m_TypeIsSet = false;
+    m_Message = utility::conversions::to_string_t("");
+    m_MessageIsSet = false;
+    fromJson(json);
+}
+
 ApiResponse::~ApiResponse()
 {
 }

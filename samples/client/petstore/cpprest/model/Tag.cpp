@@ -27,6 +27,15 @@ Tag::Tag()
     m_NameIsSet = false;
 }
 
+Tag::Tag(const web::json::value& json)
+{
+    m_Id = 0L;
+    m_IdIsSet = false;
+    m_Name = utility::conversions::to_string_t("");
+    m_NameIsSet = false;
+    fromJson(json);
+}
+
 Tag::~Tag()
 {
 }

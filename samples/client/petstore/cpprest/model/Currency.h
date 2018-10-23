@@ -36,6 +36,7 @@ class  Currency
 {
 public:
     Currency();
+    Currency(const web::json::value& json);
     virtual ~Currency();
 
     /////////////////////////////////////////////

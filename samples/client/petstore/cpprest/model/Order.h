@@ -37,6 +37,7 @@ class  Order
 {
 public:
     Order();
+    Order(const web::json::value& json);
     virtual ~Order();
 
     /////////////////////////////////////////////

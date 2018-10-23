@@ -23,6 +23,11 @@ Currency::Currency()
 {
 }
 
+Currency::Currency(const web::json::value& json)
+{
+    fromJson(json);
+}
+
 Currency::~Currency()
 {
 }
