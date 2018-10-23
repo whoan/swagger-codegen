@@ -31,6 +31,31 @@ namespace {{this}} {
     {{/vars}}
 }
 
+{{classname}}::{{classname}}(const web::json::value& json)
+{
+    {{#vars}}
+    {{^isInherited}}
+    {{#isNotContainer}}
+    {{#isPrimitiveType}}
+    m_{{name}} = {{{defaultValue}}};
+    {{/isPrimitiveType}}
+    {{^isPrimitiveType}}
+    {{#isString}}
+    m_{{name}} = {{{defaultValue}}};
+    {{/isString}}
+    {{#isDateTime}}
+    m_{{name}} = {{{defaultValue}}};
+    {{/isDateTime}}
+    {{/isPrimitiveType}}
+    {{/isNotContainer}}
+    {{^required}}
+    m_{{name}}IsSet = false;
+    {{/required}}
+    {{/isInherited}}
+    {{/vars}}
+    fromJson(json);
+}
+
 {{classname}}::~{{classname}}()
 {
 }
